@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="hu">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frekvencia</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FREKISZÁMOLÓ</title>
 </head>
-
 <body>
+    <a href="index.html">HOME</a> |
+    <a href="keplink.html">KÉPLINK</a> |
+    <a href="lista.html">LISTA</a> |
+    <a href="tablazat.html">ÓRAREND</a> |
+    <a href="doga1.html">IT DOGA1</a> |
+    <a href="doga2.html">IT DOGA2</a> | 
+    <a class="active" href="freki.html">FREKISZÁMOLÓ</a>
 
-    <a href="index.html">HOME</a> 
-    <a href="freki.html">Frekvencia</a>
-    <a href="doga1.html">IT DOGA1</a> 
-   
-<br>
-   <img src="img/keplet.png" alt="keplet">
-  <h1>Frekvencia számláló</h1>
-<form action="">
-    <label for="induktivitas">Ad meg az induktivitás értékét:</label>
-    <input type="number" name="induktivitas" id="induktivitas">
-    <label for="capac">Ad meg az kapacítás értékét:</label>
-    <input type="number" name="capac" id="capac">
-    <input type="button" onclick="szamol()" value="enter">      
-          
-</form>
-    <p id="fo">az eredmény itt fog megjelenni.</p>
+    <br>
+    <img src="img/Rezonancia+frekvencia.jpg" alt="rezófreki képlet" width="300">
+    <br><br>
     
-<script>
-    function szamol(){
-        let L = parseInt(induktivitas.value) / 1000000;
-        let C = parseInt(capac.value) / 1000000;
-        let freki = L * C
-        freki = parseInt("induktivitas".value) * parseInt("capac".value);
-        freki = Math.sqrt(freki1);
-        freki = 2* freki;
-        freki = Math.PI * freki;
-        freki = 1 / freki;
-        document.getElementById('fo').innerHTML = freki;
-    }
+    <form action="">
+        <label for="induk">Add meg az induktivitás értékét (L) : </label>
+        <input type="number" name="induk" id="induk"> uH <br>
+        <label for="capac">Add meg a kapacitás értékét (C) : </label>
+        <input type="number" name="capac" id="capac"> uF <br>
+        <input type="button" onclick="szamol()" value="ENTER">
+        <br>
+    </form>
 
+    <span>Freki = </span>
+    <span id="fo" > ... </span>
+    <span> Hz</span>
 
-
-</script>
- 
+    <script>
+        function szamol(){
+            let L = parseInt(induk.value) / 1000000 ;
+            let C = parseInt(capac.value) / 1000000 ;
+            let freki =  L * C ;
+            freki = Math.sqrt(freki) ;
+            freki = 2 * freki ;
+            freki = Math.PI * freki ;
+            freki = 1 / freki ;
+            document.getElementById('fo').innerHTML = freki;
+        }
+    </script>
 
 
 </body>
-
 </html>
