@@ -28,9 +28,15 @@
     <p id="fo">az eredmény itt fog megjelenni.</p>
     
 <script>
-    let freki = 0;
     function szamol() {
-        freki = 1 / (2 * Math.PI * Math.sqrt(parseInt("induktivitas".value) * parseInt("capac".value))) ;
+        let L = parseInt(induktivitas.value) / 1000000;
+        let C = parseInt(capac.value) / 1000000;
+
+        let freki = parseInt("induktivitas".value) * parseInt("capac".value);
+        freki = Math.sqrt(freki1);
+        freki = 2* freki;
+        freki = Math.PI * freki;
+        freki = 1 / freki;
         document.getElementById('fo').innerHTML = freki;
     }
 
