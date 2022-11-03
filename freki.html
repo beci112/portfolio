@@ -15,7 +15,7 @@
     <a href="doga1.html">IT DOGA1</a> 
    
     <br>
-  
+   <img src="img/keplet.png" alt="keplet">
   <h1>Frekvencia számláló</h1>
     <form action="">
         <label for="induktivitas">Ad meg az induktivitás értékét:</label>
@@ -25,7 +25,20 @@
         <input type="button" onclick="szamol()" value="enter">      
           
     </form>
-    <img src="img/keplet.png" alt="keplet"> 
+    <p id="fo">az eredmény itt fog megjelenni.</p>
+    
+<script>
+    let freki = 0;
+    function szamol() {
+        document.getElementById('fo').innerHTML = freki;
+    }
+
+
+
+</script>
+
+
+
 </body>
 
 </html>
