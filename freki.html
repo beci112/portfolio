@@ -30,13 +30,14 @@
 <script>
     let freki = 0;
     function szamol() {
+        freki = 1 / (2 * Math.PI * Math.sqrt(parseInt("induktivitas".value) * parseInt("capac".value))) ;
         document.getElementById('fo').innerHTML = freki;
     }
 
 
 
 </script>
-
+ 
 
 
 </body>
