@@ -14,21 +14,21 @@
     <a href="freki.html">Frekvencia</a>
     <a href="doga1.html">IT DOGA1</a> 
    
-    <br>
+<br>
    <img src="img/keplet.png" alt="keplet">
   <h1>Frekvencia számláló</h1>
-    <form action="">
-        <label for="induktivitas">Ad meg az induktivitás értékét:</label>
-        <input type="number" name="induktivitas" id="induktivitas">
-        <label for="capac">Ad meg az kapacítás értékét:</label>
-        <input type="number" name="capac" id="capac">
-        <input type="button" onclick="szamol()" value="enter">      
+<form action="">
+    <label for="induktivitas">Ad meg az induktivitás értékét:</label>
+    <input type="number" name="induktivitas" id="induktivitas">
+    <label for="capac">Ad meg az kapacítás értékét:</label>
+    <input type="number" name="capac" id="capac">
+    <input type="button" onclick="szamol()" value="enter">      
           
-    </form>
+</form>
     <p id="fo">az eredmény itt fog megjelenni.</p>
     
 <script>
-    function szamol() {
+    function szamol(){
         let L = parseInt(induktivitas.value) / 1000000;
         let C = parseInt(capac.value) / 1000000;
         let freki = L * C
