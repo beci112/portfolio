@@ -31,8 +31,8 @@
     function szamol() {
         let L = parseInt(induktivitas.value) / 1000000;
         let C = parseInt(capac.value) / 1000000;
-
-        let freki = parseInt("induktivitas".value) * parseInt("capac".value);
+        let freki = L * C
+        freki = parseInt("induktivitas".value) * parseInt("capac".value);
         freki = Math.sqrt(freki1);
         freki = 2* freki;
         freki = Math.PI * freki;
